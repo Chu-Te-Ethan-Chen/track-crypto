@@ -18,7 +18,7 @@ const DUMMY_CRYPTOCOINS = [
 
 const CryptoCoinsTable = (props) => {
   return (
-    <section className="flex items-center justify-center bg-gray-900">
+    <section className="flex items-center justify-center">
       <div className="container mx-auto max-w-4xl">
         <div className="col-span-12">
           <div className="overflow-auto lg:overflow-visible">

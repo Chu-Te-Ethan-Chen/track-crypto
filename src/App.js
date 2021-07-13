@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from "react-redux";
 import { Fragment, useEffect } from "react";
-import SimpleInput from "./components/SimpleInput";
+import QueryForm from "./components/QueryForm";
 import CryptoCoinsTable from "./components/CryptoCoinsTable";
 import Notification from "./components/UI/Notification";
 import { fetchCoinsList } from "./store/crypto-actions";
@@ -23,7 +23,7 @@ function App() {
             message={notification.message}
           />
         )}
-        <SimpleInput />
+        <QueryForm />
         <CryptoCoinsTable />
       </Fragment>
     </div>
