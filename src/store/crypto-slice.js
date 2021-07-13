@@ -3,9 +3,13 @@ import { createSlice } from "@reduxjs/toolkit";
 const cryptoSlice = createSlice({
   name: "crypto",
   initialState: {
-    items: [],
+    coinsList: [],
+    coinsInfo: [],
   },
-  reducers: {},
+  reducers: {
+    addCoinsInfo() {},
+    removeCoinsInfo() {},
+  },
 });
 
 export const cryptoActions = cryptoSlice.actions;

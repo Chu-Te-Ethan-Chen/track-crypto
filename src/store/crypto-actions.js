@@ -1,3 +1,5 @@
+import { uiActions } from "./ui-slice";
+
 export const fetchCoinsList = () => {
   return async (dispatch) => {
     const fetchData = async () => {
@@ -15,10 +17,30 @@ export const fetchCoinsList = () => {
     };
 
     try {
+      dispatch(
+        uiActions.showNotification({
+          status: "pending",
+          title: "Fetching",
+          message: "Fetching coins list.",
+        })
+      );
       const coinList = await fetchData();
       console.log(coinList);
+      dispatch(
+        uiActions.showNotification({
+          status: "success",
+          title: "Success!",
+          message: "Fetch coins list successfully.",
+        })
+      );
     } catch (error) {
-      console.log(error);
+      dispatch(
+        uiActions.showNotification({
+          status: "error",
+          title: "Error",
+          message: "Fetching coins list failed.",
+        })
+      );
     }
   };
 };
