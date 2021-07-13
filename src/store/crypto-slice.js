@@ -8,6 +8,6 @@ const cryptoSlice = createSlice({
   reducers: {},
 });
 
-export const cartActions = cryptoSlice.actions;
+export const cryptoActions = cryptoSlice.actions;
 
 export default cryptoSlice;

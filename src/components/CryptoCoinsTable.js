@@ -32,7 +32,7 @@ const CryptoCoinsTable = (props) => {
       </thead>
       <tbody>
         {DUMMY_CRYPTOCOINS.map((coin) => (
-          <tr>
+          <tr key={coin.id}>
             <td>{coin.name}</td>
             <td>$32,523.32</td>
             <td>2.81%</td>
