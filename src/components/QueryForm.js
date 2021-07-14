@@ -45,9 +45,20 @@ const QueryForm = (props) => {
                         onChange={nameInputChangeHandler}
                         value={enteredName}
                         placeholder="Bitcoin"
-                        className="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+                        className={`${
+                          enteredNameIsValid
+                            ? "border-gray-300"
+                            : "border-red-700"
+                        } mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm rounded-md`}
                       />
-                      {!enteredNameIsValid && <p>Coin name must be valid.</p>}
+                      {!enteredNameIsValid && (
+                        <span
+                          className="text-xs text-red-700"
+                          id="CoinNameHelp"
+                        >
+                          Coin name must be valid.
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
